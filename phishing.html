@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Phishing - CyberSafe Learning</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2>🔐 CyberSafe Learning</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="artikel.html">Artikel</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="phishing.html">Simulasi Phishing</a></li>
+            <li><a href="kuis.html">Kuis</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="content">
+    <h1 class="section-title">🎣 Simulasi Phishing</h1>
+    <p class="section-desc">
+        Perhatikan contoh pesan di bawah ini. Pilih apakah pesan tersebut aman atau termasuk phishing.
+    </p>
+
+    <div class="email-card">
+        <div class="email-header">
+            <h2>📩 Pesan Masuk</h2>
+            <span class="danger-badge">Simulasi</span>
+        </div>
+
+        <p><strong>Dari:</strong> Bank Aman Digital &lt;promo-bankaman@hadiah-login.com&gt;</p>
+        <p><strong>Subjek:</strong> Akun Anda Perlu Verifikasi Segera</p>
+
+        <div class="email-body">
+            <p>Yth. Nasabah,</p>
+            <p>
+                Sistem kami mendeteksi aktivitas mencurigakan pada akun Anda.
+                Untuk menghindari pemblokiran akun, segera lakukan verifikasi data
+                melalui link berikut:
+            </p>
+
+            <p class="fake-link">http://bank-aman-verifikasi-akun-gratis.com/login</p>
+
+            <p>
+                Jika tidak melakukan verifikasi dalam 10 menit, akun Anda akan diblokir.
+            </p>
+
+            <p>Hormat kami,<br>Tim Keamanan Bank Aman Digital</p>
+        </div>
+    </div>
+
+    <div class="warning-box">
+        <h3>Petunjuk Analisis</h3>
+        <ul>
+            <li>Perhatikan alamat email pengirim.</li>
+            <li>Perhatikan link website yang digunakan.</li>
+            <li>Perhatikan kata-kata yang bersifat mendesak atau mengancam.</li>
+        </ul>
+    </div>
+
+    <div class="button-group">
+        <button onclick="cekPhishing('aman')">Pesan Aman</button>
+        <button onclick="cekPhishing('phishing')">Pesan Phishing</button>
+    </div>
+
+    <div id="hasil" class="result"></div>
+
+    <div class="article">
+        <h2>Kenapa Ini Termasuk Phishing?</h2>
+        <p>
+            Pesan tersebut termasuk phishing karena menggunakan alamat email tidak resmi,
+            link mencurigakan, serta kata-kata mendesak agar pengguna segera memberikan data.
+        </p>
+
+        <ul>
+            <li>Domain email tidak sesuai dengan domain resmi bank.</li>
+            <li>Link menggunakan nama domain yang mencurigakan.</li>
+            <li>Ada tekanan waktu agar korban panik.</li>
+            <li>Pesan meminta pengguna melakukan verifikasi melalui link palsu.</li>
+        </ul>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 CyberSafe Learning | UAS Data and Information Security</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

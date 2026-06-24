@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Keamanan Digital - CyberSafe Learning</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2>🔐 CyberSafe Learning</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="artikel.html">Artikel</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="phishing.html">Simulasi Phishing</a></li>
+            <li><a href="kuis.html">Kuis</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="content">
+
+    <h1 class="section-title">🧠 Kuis Keamanan Digital</h1>
+
+    <p class="section-desc">
+        Jawab pertanyaan berikut untuk menguji pemahaman Anda tentang keamanan informasi.
+    </p>
+
+    <div class="quiz-box">
+
+        <div class="question">
+            <h3>1. Password yang paling aman adalah?</h3>
+
+            <label>
+                <input type="radio" name="q1" value="0">
+                12345678
+            </label><br>
+
+            <label>
+                <input type="radio" name="q1" value="0">
+                password123
+            </label><br>
+
+            <label>
+                <input type="radio" name="q1" value="1">
+                Zk!2026#Secure
+            </label><br>
+
+            <label>
+                <input type="radio" name="q1" value="0">
+                tanggal_lahir
+            </label>
+        </div>
+
+        <hr>
+
+        <div class="question">
+            <h3>2. Apa tujuan utama phishing?</h3>
+
+            <label>
+                <input type="radio" name="q2" value="1">
+                Mencuri informasi pengguna
+            </label><br>
+
+            <label>
+                <input type="radio" name="q2" value="0">
+                Mempercepat internet
+            </label><br>
+
+            <label>
+                <input type="radio" name="q2" value="0">
+                Memperbaiki komputer
+            </label><br>
+
+            <label>
+                <input type="radio" name="q2" value="0">
+                Membersihkan virus
+            </label>
+        </div>
+
+        <hr>
+
+        <div class="question">
+            <h3>3. Fungsi autentikasi dua faktor (2FA) adalah?</h3>
+
+            <label>
+                <input type="radio" name="q3" value="1">
+                Menambah lapisan keamanan akun
+            </label><br>
+
+            <label>
+                <input type="radio" name="q3" value="0">
+                Menghapus password
+            </label><br>
+
+            <label>
+                <input type="radio" name="q3" value="0">
+                Mempercepat download
+            </label><br>
+
+            <label>
+                <input type="radio" name="q3" value="0">
+                Menambah kuota internet
+            </label>
+        </div>
+
+        <hr>
+
+        <div class="question">
+            <h3>4. Mengapa update sistem penting?</h3>
+
+            <label>
+                <input type="radio" name="q4" value="1">
+                Menutup celah keamanan
+            </label><br>
+
+            <label>
+                <input type="radio" name="q4" value="0">
+                Menghapus semua data
+            </label><br>
+
+            <label>
+                <input type="radio" name="q4" value="0">
+                Mematikan antivirus
+            </label><br>
+
+            <label>
+                <input type="radio" name="q4" value="0">
+                Mengurangi RAM
+            </label>
+        </div>
+
+        <hr>
+
+        <div class="question">
+            <h3>5. Apa yang harus dilakukan jika menerima email mencurigakan?</h3>
+
+            <label>
+                <input type="radio" name="q5" value="1">
+                Tidak mengklik link dan memverifikasi pengirim
+            </label><br>
+
+            <label>
+                <input type="radio" name="q5" value="0">
+                Langsung login
+            </label><br>
+
+            <label>
+                <input type="radio" name="q5" value="0">
+                Membagikan OTP
+            </label><br>
+
+            <label>
+                <input type="radio" name="q5" value="0">
+                Mengirim password
+            </label>
+        </div>
+
+        <br>
+
+        <button onclick="hitungSkor()">Lihat Hasil</button>
+
+        <div id="hasilKuis" class="result"></div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 CyberSafe Learning | UAS Data and Information Security</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
