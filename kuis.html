@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuis Keamanan Digital - CyberSafe Learning</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
 </head>
 <body>
 
 <header>
     <nav class="navbar">
-        <h2>🔐 CyberSafe Learning</h2>
+        <h2>
+            <a href="index.html" class="logo">
+                🔐 CyberSafe Learning
+            </a>
+        </h2>
+
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="artikel.html">Artikel</a></li>
@@ -30,28 +36,87 @@
         Jawab pertanyaan berikut untuk menguji pemahaman Anda tentang keamanan informasi.
     </p>
 
-    <div class="quiz-box">
+    <div class="quiz-start">
+
+    <label for="namaPeserta">
+        👤 Nama Peserta
+    </label>
+
+    <input
+        type="text"
+        id="namaPeserta"
+        placeholder="Masukkan nama Anda">
+
+    <button id="mulaiBtn" onclick="mulaiKuis()">
+        🚀 Mulai Kuis
+    </button>
+
+</div>
+
+<div class="progress-container">
+
+    <div
+        class="progress-bar"
+        id="progressBar">
+    </div>
+
+</div>
+
+<p
+id="progressText"
+class="progress-text">
+
+Progress :
+0%
+
+</p>
+
+    <div
+class="quiz-box"
+id="quizBox"
+
+style="display:none;">
 
         <div class="question">
             <h3>1. Password yang paling aman adalah?</h3>
 
             <label>
-                <input type="radio" name="q1" value="0">
+                <input
+type="radio"
+name="q1"
+value="0"
+
+onchange="updateProgress()">
                 12345678
             </label><br>
 
             <label>
-                <input type="radio" name="q1" value="0">
+                <input
+type="radio"
+name="q1"
+value="0"
+
+onchange="updateProgress()">
                 password123
             </label><br>
 
             <label>
-                <input type="radio" name="q1" value="1">
+                <input
+type="radio"
+name="q1"
+value="1"
+
+onchange="updateProgress()">
                 Zk!2026#Secure
             </label><br>
 
             <label>
-                <input type="radio" name="q1" value="0">
+                <input
+type="radio"
+name="q1"
+value="0"
+
+onchange="updateProgress()">
                 tanggal_lahir
             </label>
         </div>
@@ -62,22 +127,42 @@
             <h3>2. Apa tujuan utama phishing?</h3>
 
             <label>
-                <input type="radio" name="q2" value="1">
+                <input
+type="radio"
+name="q2"
+value="1"
+
+onchange="updateProgress()">
                 Mencuri informasi pengguna
             </label><br>
 
             <label>
-                <input type="radio" name="q2" value="0">
+                <input
+type="radio"
+name="q2"
+value="0"
+
+onchange="updateProgress()">
                 Mempercepat internet
             </label><br>
 
             <label>
-                <input type="radio" name="q2" value="0">
+                <input
+type="radio"
+name="q2"
+value="0"
+
+onchange="updateProgress()">
                 Memperbaiki komputer
             </label><br>
 
             <label>
-                <input type="radio" name="q2" value="0">
+                <input
+type="radio"
+name="q2"
+value="0"
+
+onchange="updateProgress()">
                 Membersihkan virus
             </label>
         </div>
@@ -88,22 +173,42 @@
             <h3>3. Fungsi autentikasi dua faktor (2FA) adalah?</h3>
 
             <label>
-                <input type="radio" name="q3" value="1">
+                <input
+type="radio"
+name="q3"
+value="1"
+
+onchange="updateProgress()">
                 Menambah lapisan keamanan akun
             </label><br>
 
             <label>
-                <input type="radio" name="q3" value="0">
+                <input
+type="radio"
+name="q3"
+value="0"
+
+onchange="updateProgress()">
                 Menghapus password
             </label><br>
 
             <label>
-                <input type="radio" name="q3" value="0">
+                <input
+type="radio"
+name="q3"
+value="0"
+
+onchange="updateProgress()">
                 Mempercepat download
             </label><br>
 
             <label>
-                <input type="radio" name="q3" value="0">
+                <input
+type="radio"
+name="q3"
+value="0"
+
+onchange="updateProgress()">
                 Menambah kuota internet
             </label>
         </div>
@@ -114,22 +219,42 @@
             <h3>4. Mengapa update sistem penting?</h3>
 
             <label>
-                <input type="radio" name="q4" value="1">
+                <input
+type="radio"
+name="q4"
+value="1"
+
+onchange="updateProgress()">
                 Menutup celah keamanan
             </label><br>
 
             <label>
-                <input type="radio" name="q4" value="0">
+                <input
+type="radio"
+name="q4"
+value="0"
+
+onchange="updateProgress()">
                 Menghapus semua data
             </label><br>
 
             <label>
-                <input type="radio" name="q4" value="0">
+                <input
+type="radio"
+name="q4"
+value="0"
+
+onchange="updateProgress()">
                 Mematikan antivirus
             </label><br>
 
             <label>
-                <input type="radio" name="q4" value="0">
+                <input
+type="radio"
+name="q4"
+value="0"
+
+onchange="updateProgress()">
                 Mengurangi RAM
             </label>
         </div>
@@ -140,31 +265,208 @@
             <h3>5. Apa yang harus dilakukan jika menerima email mencurigakan?</h3>
 
             <label>
-                <input type="radio" name="q5" value="1">
+                <input
+type="radio"
+name="q5"
+value="1"
+
+onchange="updateProgress()">
                 Tidak mengklik link dan memverifikasi pengirim
             </label><br>
 
             <label>
-                <input type="radio" name="q5" value="0">
+                <input
+type="radio"
+name="q5"
+value="0"
+
+onchange="updateProgress()">
                 Langsung login
             </label><br>
 
             <label>
-                <input type="radio" name="q5" value="0">
+                <input
+type="radio"
+name="q5"
+value="0"
+
+onchange="updateProgress()">
                 Membagikan OTP
             </label><br>
 
             <label>
-                <input type="radio" name="q5" value="0">
+                <input
+type="radio"
+name="q5"
+value="0"
+
+onchange="updateProgress()">
                 Mengirim password
             </label>
         </div>
 
         <br>
 
+        <hr>
+
+<h2>
+📝 Soal Esai
+</h2>
+
+<div class="question">
+
+<h3>
+6. Jelaskan apa yang dimaksud dengan phishing.
+</h3>
+
+<textarea
+id="esai1"
+
+rows="5"
+
+placeholder="Tuliskan jawaban Anda..."
+
+oninput="updateProgress()">
+
+</textarea>
+
+</div>
+
+<hr>
+
+<div class="question">
+
+<h3>
+7. Mengapa password yang kuat sangat penting?
+</h3>
+
+<textarea
+id="esai2"
+
+rows="5"
+
+placeholder="Tuliskan jawaban Anda..."
+
+oninput="updateProgress()">
+
+</textarea>
+
+</div>
+
+<hr>
+
+<div class="question">
+
+<h3>
+8. Sebutkan tiga cara menjaga keamanan akun media sosial.
+</h3>
+
+<textarea
+id="esai3"
+
+rows="5"
+
+placeholder="Tuliskan jawaban Anda..."
+
+oninput="updateProgress()">
+
+</textarea>
+
+</div>
+
+<hr>
+
+<div class="question">
+
+<h3>
+9. Apa manfaat autentikasi dua faktor (2FA)?
+</h3>
+
+<textarea
+id="esai4"
+
+rows="5"
+
+placeholder="Tuliskan jawaban Anda..."
+
+oninput="updateProgress()">
+
+</textarea>
+
+</div>
+
+<hr>
+
+<div class="question">
+
+<h3>
+10. Menurut Anda, mengapa kesadaran keamanan digital penting di era modern?
+</h3>
+
+<textarea
+id="esai5"
+
+rows="5"
+
+placeholder="Tuliskan jawaban Anda..."
+
+oninput="updateProgress()">
+
+</textarea>
+
+</div>
+
+<hr>
+
         <button onclick="hitungSkor()">Lihat Hasil</button>
 
         <div id="hasilKuis" class="result"></div>
+<div
+id="sertifikat"
+
+class="sertifikat"
+
+style="display:none;">
+
+<h2>
+🏆 Sertifikat Kelulusan
+</h2>
+
+<p>
+
+Diberikan kepada
+
+</p>
+
+<h3 id="namaSertifikat"></h3>
+
+<p>
+
+Telah menyelesaikan
+
+CyberSafe Learning Quiz
+
+</p>
+
+<h3 id="nilaiSertifikat"></h3>
+
+<p id="pesanSertifikat"></p>
+
+<br>
+
+<div class="button-group">
+
+    <button onclick="downloadPDF()">
+        📄 Download Sertifikat
+    </button>
+
+    <button class="restart-btn" onclick="ulangKuis()">
+        🔄 Ulangi Kuis
+    </button>
+
+</div>
+
+</div>
 
     </div>
 

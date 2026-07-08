@@ -9,6 +9,8 @@ body {
     background: linear-gradient(135deg, #020617, #0f172a, #1e293b);
     color: #ffffff;
     min-height: 100vh;
+
+    padding-top: 80px;
 }
 
 .navbar {
@@ -17,9 +19,15 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 8%;
-    position: sticky;
+
+    position: fixed;
     top: 0;
-    z-index: 100;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
 .navbar h2 {
@@ -336,6 +344,36 @@ footer {
     color: #cbd5e1;
 }
 
+/* ========================= */
+/* Tombol Sertifikat */
+/* ========================= */
+
+.button-group{
+
+    margin-top:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.restart-btn{
+
+    background:#ef4444;
+
+}
+
+.restart-btn:hover{
+
+    background:#dc2626;
+
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -364,4 +402,241 @@ footer {
     .section-title {
         font-size: 28px;
     }
+    .button-group{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.button-group button{
+
+    width:100%;
+    max-width:300px;
+    margin:5px 0;
+
+}
+}
+
+.logo{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.logo:hover{
+    color:#00d4ff;
+}
+
+/* ===== REFERENSI ARTIKEL ===== */
+
+.reference-box{
+    margin-top:40px;
+    padding:25px;
+    background:rgba(255,255,255,0.08);
+    border-left:5px solid #0ea5e9;
+    border-radius:15px;
+}
+
+.reference-box h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.reference-box p{
+    margin-bottom:15px;
+    line-height:1.8;
+}
+
+.reference-box ul{
+    margin-left:20px;
+}
+
+.reference-box li{
+    margin-bottom:12px;
+}
+
+.reference-box a{
+    color:#7dd3fc;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.reference-box a:hover{
+    color:#facc15;
+    text-decoration:underline;
+}
+
+/* ========================= */
+/* QUIZ PREMIUM */
+/* ========================= */
+
+.quiz-start{
+    margin:30px 0;
+    text-align:center;
+}
+
+.quiz-start label{
+    display:block;
+    font-size:20px;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+.quiz-start input{
+    width:350px;
+    max-width:90%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+.progress-container{
+
+    width:100%;
+    height:22px;
+
+    background:#334155;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin:25px 0;
+
+}
+
+.progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#0ea5e9,#22c55e);
+
+    transition:.5s;
+
+}
+
+.progress-text{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    font-weight:bold;
+
+}
+
+textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:none;
+
+    resize:vertical;
+
+    margin-top:12px;
+
+    min-height:120px;
+
+    font-size:15px;
+
+}
+
+.certificate{
+
+    margin-top:35px;
+
+    padding:30px;
+
+    border:3px dashed gold;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    display:none;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.certificate h2{
+
+    color:gold;
+
+    margin-bottom:15px;
+
+}
+
+.restart{
+
+    margin-top:20px;
+
+    background:#ef4444;
+
+}
+
+.restart:hover{
+
+    background:#dc2626;
+
+}
+
+.progress-container{
+    width:100%;
+    background:#334155;
+    border-radius:30px;
+    overflow:hidden;
+    height:20px;
+    margin:20px 0;
+}
+
+.progress-bar{
+    width:0%;
+    height:100%;
+    background:#ef4444;
+    transition:width .6s ease, background .6s ease;
+}
+
+.sertifikat{
+
+margin-top:40px;
+
+padding:40px;
+
+border-radius:20px;
+
+background:white;
+
+color:#111827;
+
+text-align:center;
+
+box-shadow:0 15px 40px rgba(0,0,0,.3);
+
+}
+
+.sertifikat h2{
+
+color:#0284c7;
+
+margin-bottom:20px;
+
+}
+
+.sertifikat h3{
+
+font-size:30px;
+
+margin:15px 0;
+
 }
